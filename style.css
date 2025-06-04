@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e2f;
+  color: #eee;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  user-select: none;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  text-shadow: 0 0 5px #00bfff;
+}
+
+#questBox {
+  background: #2c2c44;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00bfff88;
+  font-size: 1.4rem;
+  min-height: 180px;
+  line-height: 1.5;
+}
+
+#questBox h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#questDetails {
+  background: #22253b;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0077ffaa;
+  font-size: 1rem;
+  text-align: left;
+  white-space: pre-wrap;
+  min-height: 180px;
+}
+
+#quizForm {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  background: #2e3351;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00bfffaa;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.question select {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#quizControls {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+#submitBtn {
+  background: #00bfff;
+  border: none;
+  color: #111;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 15px #00bfffaa;
+  width: 100%;
+}
+
+#submitBtn:hover {
+  background: #008fcc;
+}
+
+#progress {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  font-size: 2.5rem;
+  user-select: none;
+}
+
+#resultMessage {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00ff99;
+  min-height: 40px;
+  user-select: none;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  #questBox, #questDetails, #quizForm {
+    font-size: 1rem;
+  }
+}
