@@ -95,20 +95,23 @@ quizForm.addEventListener("submit", (e) => {
   const selectedAnswer = quizForm.querySelector("select").value;
   const correctAnswer = quests[currentQuest].question.correctAnswer;
 
+  submitBtn.disabled = true; // Disable button to avoid multiple submissions
+
   if (selectedAnswer === correctAnswer) {
     resultMessage.textContent = `✅ Correct! You completed ${quests[currentQuest].title}`;
-    completed.push(currentQuest);
-    currentQuest++;
-    if (currentQuest < quests.length) {
-      setTimeout(renderQuest, 1500);
-    } else {
-      resultMessage.textContent += " 🎉 You've completed all the quests!";
-    }
+    completed.push(currentQuest); // Mark current quest as completed
+    setTimeout(() => {
+      currentQuest++; // Move to the next quest
+      if (currentQuest < quests.length) {
+        renderQuest(); // Render next quest
+      } else {
+        resultMessage.textContent = "🎉 You've completed all the quests!";
+      }
+    }, 1500); // Wait 1.5 seconds before switching
   } else {
     resultMessage.textContent = `❌ Incorrect. Hint: ${quests[currentQuest].question.hint}`;
+    submitBtn.disabled = false; // Re-enable button to allow retry
   }
-
-  submitBtn.disabled = true;
 });
 
-renderQuest();
+renderQuest(); // Start the game
