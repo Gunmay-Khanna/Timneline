@@ -2,37 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Career Quest Game with Quizzes</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Quest</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <h1>🎯 Career Quest Game 🎯</h1>
-
-  <div id="questBox">
-    <!-- Quest content here -->
+  <div class="game-container">
+    <h1>🎓 Career Quest: Lawyer Edition</h1>
+    <div id="xp-bar">
+      <div id="xp-fill"></div>
+    </div>
+    <div id="timeline-display" class="level">
+      <!-- Timeline content will be displayed here -->
+    </div>
+    <button id="next-level-btn">Next Level</button>
   </div>
-
-  <div id="questDetails">
-    <!-- Full plan text for the year here -->
-  </div>
-
-  <form id="quizForm">
-    <!-- Quiz questions here -->
-  </form>
-
-  <div id="quizControls">
-    <button id="submitBtn" type="submit">Submit Answer ✅</button>
-  </div>
-
-  <div id="progress">
-    <!-- Progress emojis here -->
-  </div>
-
-  <div id="resultMessage"></div>
-
   <script src="script.js"></script>
-
 </body>
 </html>
